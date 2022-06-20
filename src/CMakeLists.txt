@@ -26,7 +26,7 @@ else()
         target_link_libraries(uwsc PRIVATE ${SSL_TARGET})
     endif()
 
-    target_link_libraries(uwsc PRIVATE ${LIBEV_LIBRARY})
+    target_link_libraries(uwsc PRIVATE libevent::core libevent::extra)
     set_target_properties(uwsc PROPERTIES VERSION ${UWSC_VERSION_MAJOR}.${UWSC_VERSION_MINOR}.${UWSC_VERSION_PATCH})
 endif()
 
