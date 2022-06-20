@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.21)
 
 project(libuwsc C)
 
@@ -15,7 +15,7 @@ if(BUILD_STATIC)
     set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 endif()
 
-find_package(Libev REQUIRED)
+find_package(Libevent CONFIG REQUIRED)
 
 add_subdirectory(src/ssl)
 
